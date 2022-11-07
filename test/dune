@@ -1,0 +1,3 @@
+(test
+ (name stdint_pro)
+ (libraries stdint_pro alcotest))
