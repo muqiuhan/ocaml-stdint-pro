@@ -14,6 +14,7 @@ depends: [
   "dune" {>= "3.5"}
   "stdint"
   "stdint-literals"
+  "alcotest"
   "odoc" {with-doc}
 ]
 build: [
