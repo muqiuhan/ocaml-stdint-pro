@@ -20,7 +20,7 @@
  (allow_empty)
  (synopsis "Improve ocaml-stdint")
  (description "Improve the usability of stdint from OCaml level")
- (depends ocaml dune stdint stdint-literals alcotest)
+ (depends ocaml dune stdint alcotest)
  (tags
   (stdint integer)))
 

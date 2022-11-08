@@ -20,29 +20,13 @@ For testing, this library uses [alcotest](https://github.com/mirage/alcotest) fo
 - [alcotest](https://github.com/mirage/alcotest) :  A lightweight and colourful test framework.
 - [ocaml-stdint](https://github.com/andrenth/ocaml-stdint) :  Various signed and unsigned integers for OCaml 
 
-```shell
-opam install alcotest stdint
-```
+```opam install alcotest stdint```
 
-__TEST__
-```shell
-dune test
-```
+__BUILD AND USE__
 
-__USE__
-```shell
-λ ~/stdint_pro/ master* opam install .
-Package stdint_pro does not exist, create as a NEW package? [Y/n] y
-stdint_pro is now pinned to git+file:///home/muqiuhan/stdint_pro#master (version ~dev)
-The following actions will be performed:
-  ∗ install stdint_pro ~dev*
-
-<><> Processing actions <><><><><><><><><><><><><><><><><><><><><><><><><><><><>
-⬇ retrieved stdint_pro.~dev  (git+file:///home/muqiuhan/stdint_pro#master)
-∗ installed stdint_pro.~dev
-Done.
-λ ~/stdint_pro/ master*
-```
+```dune build @runtest @install```
+and
+```dune install```
 
 ---
 
