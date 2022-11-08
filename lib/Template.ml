@@ -20,7 +20,7 @@
  * OR OTHER DEALINGS IN THE SOFTWARE. 
  *******************************************************************************)
 
-module Stdint_Pro_Template =
+module Operator_Template =
 functor
   (Stdint_Modules : Stdint.Int)
   ->
@@ -94,57 +94,3 @@ functor
      fun x y -> Stdint_Modules.to_int x lxor y |> Stdint_Modules.of_int
    ;;
   end
-
-module Stdint = struct
-  include Stdint
-
-  module Uint8 = struct
-    include Uint8
-    include Stdint_Pro_Template (Uint8)
-  end
-
-  module Uint16 = struct
-    include Uint16
-    include Stdint_Pro_Template (Uint16)
-  end
-  
-  module Uint32 = struct
-    include Uint32
-    include Stdint_Pro_Template (Uint32)
-  end
-
-  module Uint64 = struct
-    include Uint64
-    include Stdint_Pro_Template (Uint64)
-  end
-
-  module Uint128 = struct
-    include Uint128
-    include Stdint_Pro_Template (Uint128)
-  end
-
-  module Int8 = struct
-    include Int8
-    include Stdint_Pro_Template (Int8)
-  end
-
-  module Int16 = struct
-    include Int16
-    include Stdint_Pro_Template (Int16)
-  end
-  
-  module Int32 = struct
-    include Int32
-    include Stdint_Pro_Template (Int32)
-  end
-
-  module Int64 = struct
-    include Int64
-    include Stdint_Pro_Template (Int64)
-  end
-
-  module Int128 = struct
-    include Int128
-    include Stdint_Pro_Template (Int128)
-  end
-end
