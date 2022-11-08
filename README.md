@@ -7,15 +7,61 @@
 
 ---
 
+__WHY_THIS_PROJECT?__
+
 [ocaml-stdint](https://github.com/andrenth/ocaml-stdint) provides extensions to OCaml's own integer types, but sometimes not enough, such as the lack of many bit operators.
 
 So the goal of this library is to provide a __simple__ layer of extensions over ocaml-stdint that doesn't involve the underlying ffi code.
 
-The library relies on [stdint](https://github.com/andrenth/ocaml-stdint) as the base and [stdint-literal](https://github.com/Firobe/ocaml-stdint-literals), which is used to provide the former with more expressive power at the source level.
+__DEPENDS__
 
-For testing, the library uses [alcotest](https://github.com/mirage/alcotest) for full-coverage unit testing.
+For testing, this library uses [alcotest](https://github.com/mirage/alcotest) for full-coverage unit testing.
 
+- [alcotest](https://github.com/mirage/alcotest) :  A lightweight and colourful test framework.
+- [ocaml-stdint](https://github.com/andrenth/ocaml-stdint) :  Various signed and unsigned integers for OCaml 
+
+```shell
+opam install alcotest stdint
+```
+
+__TEST__
+```shell
+dune test
+```
+
+__USE__
+```shell
+λ ~/stdint_pro/ master* opam install .
+Package stdint_pro does not exist, create as a NEW package? [Y/n] y
+stdint_pro is now pinned to git+file:///home/muqiuhan/stdint_pro#master (version ~dev)
+The following actions will be performed:
+  ∗ install stdint_pro ~dev*
+
+<><> Processing actions <><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+⬇ retrieved stdint_pro.~dev  (git+file:///home/muqiuhan/stdint_pro#master)
+∗ installed stdint_pro.~dev
+Done.
+λ ~/stdint_pro/ master*
+```
 
 ---
 
 Copyright (c) 2022 Muqiu Han
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+OR OTHER DEALINGS IN THE SOFTWARE.
